@@ -760,7 +760,7 @@
             <div class="contact-icon">✉️</div>
             <div class="contact-item-text">
               <strong>Email</strong>
-              <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c1a7a4aca881a4a5aea3aca0b3aaa4b5a8afa6efb2a8b5a4">[email&#160;protected]</a></span>
+              <span>femi@edobmarketing.site</span>
             </div>
           </div>
           <div class="contact-item">
@@ -839,12 +839,12 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 Edob Marketing. Tous droits réservés.</span>
-      <span>Fait avec ❤️ pour les PME | <a href="/cdn-cgi/l/email-protection#284e4d4541684d4c474a45495a434d5c41464f065b415c4d"><span class="__cf_email__" data-cfemail="8aecefe7e3caefeee5e8e7ebf8e1effee3e4eda4f9e3feef">[email&#160;protected]</span></a></span>
+      <span>Fait avec ❤️ pour les PME | <a href="mailto:femi@edobmarketing.site">femi@edobmarketing.site</a></span>
     </div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // Scroll animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
@@ -875,4 +875,21 @@
       cta.style.display = '';
     } else {
       links.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:#fff;padding:1.5rem 5%;gap:1.2rem;border-bottom:1px solid rgba(135,206,235,0.2);box-shadow:0 10px 30px rgba(21,101,163,0.1);z-index:999';
-      cta.style.cssText = 'display:block;margin:0 5% 1rem;text-align:center;position:fixed;top:calc(68px + 7.5rem);le
+      cta.style.cssText = 'display:block;margin:0 5% 1rem;text-align:center;position:fixed;top:calc(68px + 7.5rem);left:0;right:0;z-index:999';
+    }
+  }
+
+  // Form feedback
+  function handleSubmit(btn) {
+    btn.textContent = '✓ Message envoyé !';
+    btn.style.background = '#2e8fc4';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = 'Envoyer mon message →';
+      btn.style.background = '';
+      btn.disabled = false;
+    }, 3000);
+  }
+</script>
+</body>
+</html>

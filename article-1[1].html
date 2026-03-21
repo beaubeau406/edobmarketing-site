@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pourquoi vous perdez des clients sans le savoir – Edob Marketing</title>
+  <meta name="description" content="Un prospect vous écrit. Vous répondez en retard. Il disparaît. Découvrez comment l'automatisation intelligente empêche cette perte de clients coûteuse."/>
+  <meta name="keywords" content="perdre des clients, automatisation réponse prospect, relance automatique, système automatisé PME"/>
+  <meta name="author" content="Edob Marketing"/>
+  <meta name="robots" content="index, follow"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="Pourquoi vous perdez des clients sans le savoir"/>
+  <meta property="og:description" content="Un prospect vous écrit. Vous répondez en retard. Il disparaît. Voici comment l'automatisation règle ce problème."/>
+  <meta property="og:url" content="https://edobmarketing.site/article-1.html"/>
+  <link rel="canonical" href="https://edobmarketing.site/article-1.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg:#f0f4f8; --white:#ffffff; --dark:#0b1929;
+      --primary:#1a56db; --primary-d:#1240a8; --primary-l:#dbeafe;
+      --sky:#38bdf8; --accent:#f97316; --accent2:#fbbf24;
+      --text:#1e3a5f; --text-light:#5a7a9a;
+      --radius:16px; --radius-sm:10px;
+      --shadow:0 8px 32px rgba(11,25,41,0.10);
+      --shadow-sm:0 3px 12px rgba(11,25,41,0.07);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:var(--text);overflow-x:hidden;}
+    h1,h2,h3,h4{font-family:'Syne',sans-serif;}
+    .container{max-width:1160px;margin:0 auto;padding:0 5%;}
+    .btn-primary{display:inline-block;background:var(--primary);color:#fff;padding:.72rem 1.7rem;border-radius:50px;font-weight:600;font-size:.93rem;text-decoration:none;transition:all .25s;box-shadow:0 5px 18px rgba(26,86,219,0.28);}
+    .btn-primary:hover{background:var(--accent);transform:translateY(-2px);}
+
+    /* NAV */
+    nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(255,255,255,0.96);backdrop-filter:blur(18px);border-bottom:1px solid rgba(26,86,219,0.08);height:68px;display:flex;align-items:center;box-shadow:0 1px 16px rgba(11,25,41,0.07);}
+    nav .container{display:flex;align-items:center;justify-content:space-between;width:100%;}
+    .nav-logo{font-family:'Syne',sans-serif;font-size:1.42rem;font-weight:800;color:var(--primary);text-decoration:none;}
+    .nav-logo span{color:var(--accent);}
+    .nav-links{display:flex;gap:1.7rem;list-style:none;}
+    .nav-links a{text-decoration:none;color:var(--text);font-weight:500;font-size:.9rem;transition:color .2s;}
+    .nav-links a:hover{color:var(--primary);}
+    .nav-cta{background:var(--primary);color:#fff;padding:.48rem 1.25rem;border-radius:50px;font-weight:600;font-size:.86rem;text-decoration:none;transition:all .25s;}
+    .nav-cta:hover{background:var(--accent);}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--dark);border-radius:2px;}
+
+    /* BREADCRUMB */
+    .breadcrumb{padding:88px 0 0;background:var(--bg);}
+    .bc-inner{padding:.9rem 0;display:flex;align-items:center;gap:.45rem;font-size:.83rem;color:var(--text-light);}
+    .bc-inner a{color:var(--primary);text-decoration:none;}
+    .bc-inner a:hover{text-decoration:underline;}
+
+    /* HERO ARTICLE */
+    .art-hero{background:var(--bg);padding:2rem 0 0;}
+    .art-hero-inner{max-width:780px;}
+    .art-cat{display:inline-block;background:var(--primary-l);color:var(--primary);font-size:.76rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:.28rem .78rem;border-radius:50px;margin-bottom:1.1rem;}
+    .art-hero h1{font-size:clamp(1.75rem,4vw,2.9rem);font-weight:700;color:var(--dark);line-height:1.25;margin-bottom:.9rem;letter-spacing:-0.5px;}
+    .art-hero h1 em{font-style:normal;color:var(--primary);}
+    .art-intro{font-size:1.1rem;color:var(--text-light);line-height:1.78;margin-bottom:1.4rem;border-left:4px solid var(--primary);padding-left:1.2rem;}
+    .art-meta{display:flex;align-items:center;gap:1.4rem;font-size:.82rem;color:var(--text-light);padding:1.1rem 0;border-top:1px solid rgba(26,86,219,0.1);flex-wrap:wrap;}
+    .art-cover{width:100%;aspect-ratio:21/9;background:linear-gradient(135deg,#1240a8 0%,#1a56db 40%,#38bdf8 100%);border-radius:var(--radius) var(--radius) 0 0;display:flex;align-items:center;justify-content:center;margin-top:1.8rem;overflow:hidden;position:relative;}
+    .art-cover img{width:100%;height:100%;object-fit:cover;opacity:0.7;}
+    .art-cover-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;}
+    .art-cover-stat{font-family:'Syne',sans-serif;font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;color:#fff;line-height:1;}
+    .art-cover-label{font-size:1rem;color:rgba(255,255,255,0.8);margin-top:.5rem;}
+
+    /* LAYOUT */
+    .art-layout{display:grid;grid-template-columns:1fr 290px;gap:3.8rem;padding:2.8rem 0 80px;max-width:1100px;}
+
+    /* CONTENT */
+    .art-content h2{font-size:1.45rem;font-weight:700;color:var(--dark);margin:2.8rem 0 1rem;letter-spacing:-0.3px;}
+    .art-content h3{font-size:1.1rem;font-weight:700;color:var(--dark);margin:1.8rem 0 .7rem;}
+    .art-content p{font-size:.97rem;color:var(--text);line-height:1.9;margin-bottom:1.2rem;}
+    .art-content strong{color:var(--dark);}
+    .art-content ul,.art-content ol{padding-left:1.5rem;margin-bottom:1.2rem;}
+    .art-content li{font-size:.97rem;color:var(--text);line-height:1.85;margin-bottom:.45rem;}
+
+    /* SPECIAL BLOCKS */
+    .hook-block{background:linear-gradient(135deg,#071525,#1240a8);border-radius:var(--radius);padding:2rem 2.2rem;margin:2rem 0;color:#fff;}
+    .hook-block p{color:rgba(255,255,255,0.88);font-size:1rem;line-height:1.9;margin-bottom:.8rem;}
+    .hook-block p:last-child{margin:0;}
+    .hook-block .hook-line{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;color:var(--accent2);}
+
+    .hl-box{background:var(--primary-l);border-left:4px solid var(--primary);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:1.15rem 1.45rem;margin:1.8rem 0;}
+    .hl-box p{margin:0;font-size:.95rem;color:var(--primary-d);font-weight:500;line-height:1.7;}
+
+    .warning-box{background:linear-gradient(135deg,#fff7ed,#ffedd5);border-left:4px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:1.15rem 1.45rem;margin:1.8rem 0;}
+    .warning-box p{margin:0;font-size:.93rem;color:#7c2d12;line-height:1.7;}
+
+    .steps-visual{display:flex;flex-direction:column;gap:.8rem;margin:1.5rem 0;}
+    .step-v{display:flex;gap:1rem;align-items:flex-start;background:var(--bg);border-radius:var(--radius-sm);padding:1rem 1.2rem;border:1px solid rgba(26,86,219,0.1);}
+    .step-v-num{width:34px;height:34px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;flex-shrink:0;}
+    .step-v-text strong{display:block;font-size:.95rem;color:var(--dark);margin-bottom:.2rem;}
+    .step-v-text span{font-size:.87rem;color:var(--text-light);line-height:1.6;}
+
+    .scenario-box{background:#fff;border:1px solid rgba(26,86,219,0.12);border-radius:var(--radius);padding:1.8rem;margin:1.8rem 0;box-shadow:var(--shadow-sm);}
+    .scenario-box h4{font-size:1rem;font-weight:700;color:var(--primary);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem;}
+    .scenario-flow{display:flex;flex-direction:column;gap:.5rem;}
+    .scenario-step{display:flex;align-items:center;gap:.8rem;font-size:.88rem;color:var(--text);}
+    .scenario-step .s-icon{width:32px;height:32px;background:var(--primary-l);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+    .scenario-arrow{text-align:center;color:var(--primary);font-size:1.1rem;margin:.2rem 0;}
+
+    .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.8rem 0;}
+    .result-item{background:var(--bg);border-radius:var(--radius-sm);padding:1.2rem;text-align:center;border:1px solid rgba(26,86,219,0.08);}
+    .result-icon{font-size:1.8rem;margin-bottom:.5rem;}
+    .result-text{font-size:.85rem;font-weight:600;color:var(--dark);line-height:1.4;}
+
+    .limit-list{list-style:none!important;padding:0!important;margin:1rem 0;}
+    .limit-list li{display:flex;align-items:flex-start;gap:.7rem;font-size:.95rem;color:var(--text);line-height:1.75;margin-bottom:.5rem;padding:.8rem;background:var(--bg);border-radius:var(--radius-sm);}
+    .limit-list li::before{content:'✗';color:var(--accent);font-weight:700;flex-shrink:0;font-size:1rem;}
+
+    .question-finale{background:linear-gradient(135deg,#1240a8,#1a56db,#38bdf8);border-radius:var(--radius);padding:2.2rem;margin:2.5rem 0;text-align:center;color:#fff;}
+    .question-finale p{font-size:1rem;color:rgba(255,255,255,0.8);margin-bottom:1rem;}
+    .question-finale h3{font-size:1.6rem;font-weight:800;line-height:1.3;color:#fff;margin-bottom:.5rem;}
+    .question-finale em{font-style:normal;color:var(--accent2);}
+
+    .cta-article{background:linear-gradient(145deg,var(--primary-d),var(--primary));border-radius:var(--radius);padding:2.2rem;margin:2.5rem 0;color:#fff;text-align:center;}
+    .cta-article h3{font-size:1.3rem;font-weight:700;margin-bottom:.7rem;}
+    .cta-article p{font-size:.92rem;opacity:.82;line-height:1.7;margin-bottom:1.5rem;}
+    .cta-article .btn-primary{background:#fff;color:var(--primary);font-size:.95rem;padding:.8rem 2rem;}
+    .cta-article .btn-primary:hover{background:var(--accent2);color:var(--dark);}
+
+    .divider{height:1px;background:rgba(26,86,219,0.1);margin:2.5rem 0;}
+
+    .share-bar{display:flex;align-items:center;gap:.9rem;padding:1.4rem;background:var(--bg);border-radius:var(--radius);margin:2.4rem 0;flex-wrap:wrap;}
+    .share-bar span{font-weight:600;font-size:.88rem;color:var(--dark);}
+    .sbtn{display:inline-flex;align-items:center;gap:.35rem;padding:.42rem .95rem;border-radius:50px;font-size:.8rem;font-weight:600;text-decoration:none;transition:all .2s;border:none;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;}
+    .sbtn:hover{opacity:.88;transform:translateY(-1px);}
+    .s-fb{background:#1877F2;color:#fff;}
+    .s-wa{background:#25D366;color:#fff;}
+    .s-cp{background:var(--primary-l);color:var(--primary);}
+
+    .author-box{display:flex;gap:1.15rem;align-items:center;padding:1.4rem;background:var(--bg);border-radius:var(--radius);margin:1.8rem 0;border:1px solid rgba(26,86,219,0.08);}
+    .av{width:56px;height:56px;background:linear-gradient(135deg,var(--sky),var(--primary));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;}
+    .au-name{font-family:'Syne',sans-serif;font-weight:700;color:var(--dark);font-size:.97rem;}
+    .au-role{font-size:.79rem;color:var(--text-light);}
+    .au-bio{font-size:.85rem;color:var(--text-light);line-height:1.6;margin-top:.35rem;}
+
+    /* SIDEBAR */
+    .sidebar{display:flex;flex-direction:column;gap:1.4rem;}
+    .sb-card{background:var(--bg);border-radius:var(--radius);padding:1.4rem;border:1px solid rgba(26,86,219,0.08);}
+    .sb-card h4{font-size:.92rem;font-weight:700;color:var(--dark);margin-bottom:.95rem;}
+    .toc-list{list-style:none;display:flex;flex-direction:column;gap:.45rem;}
+    .toc-list li a{font-size:.83rem;color:var(--text-light);text-decoration:none;display:flex;align-items:center;gap:.35rem;transition:color .2s;line-height:1.5;}
+    .toc-list li a:hover{color:var(--primary);}
+    .toc-list li a::before{content:'→';font-size:.68rem;color:var(--primary);flex-shrink:0;}
+    .sb-cta{background:linear-gradient(145deg,var(--primary-d),var(--primary));color:#fff;}
+    .sb-cta h4{color:#fff;}
+    .sb-cta p{font-size:.83rem;color:rgba(255,255,255,0.78);line-height:1.6;margin-bottom:.95rem;}
+    .sb-cta .btn-primary{background:#fff;color:var(--primary);width:100%;text-align:center;display:block;font-size:.86rem;}
+    .stat-mini{text-align:center;padding:.5rem 0;}
+    .stat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--primary);}
+    .stat-label{font-size:.78rem;color:var(--text-light);margin-top:.2rem;}
+    .stat-divider{height:1px;background:rgba(26,86,219,0.1);margin:.8rem 0;}
+    .rel-list{display:flex;flex-direction:column;gap:.75rem;}
+    .rel-item{display:flex;gap:.75rem;align-items:flex-start;}
+    .rel-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;background:var(--primary-l);}
+    .rel-item a{font-size:.83rem;font-weight:600;color:var(--dark);text-decoration:none;line-height:1.4;}
+    .rel-item a:hover{color:var(--primary);}
+    .rel-item span{font-size:.73rem;color:var(--text-light);}
+
+    /* FOOTER */
+    footer{background:var(--dark);padding:40px 0 25px;color:rgba(255,255,255,0.62);}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;font-size:.81rem;}
+    .footer-bottom a{color:var(--sky);text-decoration:none;}
+    .fnav{display:flex;gap:1.5rem;}
+    .fnav a{color:rgba(255,255,255,0.58);text-decoration:none;font-size:.85rem;transition:color .2s;}
+    .fnav a:hover{color:var(--sky);}
+
+    @media(max-width:1024px){.art-layout{grid-template-columns:1fr;}.sidebar{display:none;}.results-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:768px){.nav-links,.nav-cta{display:none;}.hamburger{display:flex;}.results-grid{grid-template-columns:1fr;}.footer-bottom{flex-direction:column;gap:.8rem;text-align:center;}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="index.html" class="nav-logo">Edob<span>Marketing</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#how">Comment ça marche</a></li>
+      <li><a href="index.html#projects">Réalisations</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta">Démarrer →</a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="container">
+    <div class="bc-inner">
+      <a href="index.html">Accueil</a><span>/</span>
+      <a href="blog.html">Blog</a><span>/</span>
+      <span>Pourquoi vous perdez des clients sans le savoir</span>
+    </div>
+  </div>
+</div>
+
+<div class="art-hero">
+  <div class="container">
+    <div class="art-hero-inner">
+      <span class="art-cat">Automatisation</span>
+      <h1>Pourquoi vous perdez des clients<br/><em>sans le savoir</em></h1>
+      <p class="art-intro">
+        La majorité des entreprises ne perdent pas des clients à cause d'une mauvaise offre. Elles les perdent parce qu'elles ne répondent pas assez vite. Voici comment l'automatisation intelligente règle ce problème une fois pour toutes.
+      </p>
+      <div class="art-meta">
+        <span>📅 21 mars 2026</span>
+        <span>⏱️ 5 min de lecture</span>
+        <span>✍️ Edob Marketing</span>
+        <span>🏷️ Automatisation</span>
+      </div>
+    </div>
+    <div class="art-cover">
+      <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=1200&auto=format&fit=crop" alt="Automatisation intelligente"/>
+      <div class="art-cover-overlay">
+        <div class="art-cover-stat">Chaque minute compte</div>
+        <div class="art-cover-label">Un prospect non répondu = un client perdu</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="art-layout">
+
+    <article class="art-content">
+
+      <!-- HOOK -->
+      <div class="hook-block">
+        <p>Si vous gérez un business aujourd'hui, vous avez déjà vécu ça :</p>
+        <p class="hook-line">Un prospect vous écrit.</p>
+        <p class="hook-line">Vous répondez en retard... ou pas du tout.</p>
+        <p class="hook-line">Et ce prospect disparaît.</p>
+        <p style="margin-top:1rem;">Ce n'est pas un manque de motivation.<br/>C'est un <strong style="color:#fff">problème de système.</strong></p>
+      </div>
+
+      <p>Aujourd'hui, la majorité des entreprises perdent des clients non pas parce que leur offre est mauvaise, mais parce qu'elles <strong>ne répondent pas assez vite</strong>. Et dans un monde où tout est instantané, chaque minute de retard coûte de l'argent.</p>
+
+      <div class="warning-box">
+        <p>⚠️ <strong>Chiffre à retenir :</strong> Selon plusieurs études marketing, un prospect contacté dans les 5 premières minutes a <strong>21 fois plus de chances</strong> de se convertir que s'il est rappelé 30 minutes plus tard.</p>
+      </div>
+
+      <!-- SECTION 1 -->
+      <h2 id="probleme">Le vrai problème</h2>
+      <p>Quand quelqu'un vous contacte, il est <strong>chaud</strong>. Il est intéressé. Il est prêt à passer à l'action.</p>
+      <p>Mais si vous êtes occupé, si vous dormez, ou si vous avez trop de messages à traiter… vous perdez cette opportunité. Et ça, multiplié par 10, 20, 50 messages par semaine, c'est une perte énorme — souvent invisible sur le moment.</p>
+
+      <div class="hl-box">
+        <p>💡 Le problème n'est pas que vous manquez de prospects. Le problème, c'est que vous n'avez pas de système pour les traiter tous, tout le temps.</p>
+      </div>
+
+      <!-- SECTION 2 -->
+      <h2 id="solution">La solution : l'automatisation intelligente</h2>
+      <p>L'objectif n'est pas de remplacer l'humain. L'objectif est de <strong>ne plus perdre de clients inutilement</strong>.</p>
+      <p>Un système simple peut faire 3 choses fondamentales :</p>
+
+      <div class="steps-visual">
+        <div class="step-v">
+          <div class="step-v-num">1</div>
+          <div class="step-v-text">
+            <strong>Répondre immédiatement</strong>
+            <span>Dès que le prospect envoie un message, il reçoit une réponse. Pas un autorépondeur générique — une réponse claire et utile.</span>
+          </div>
+        </div>
+        <div class="step-v">
+          <div class="step-v-num">2</div>
+          <div class="step-v-text">
+            <strong>Poser les bonnes questions</strong>
+            <span>Le système qualifie le prospect : quel est son besoin ? Son budget ? Son délai ? Toutes ces infos collectées automatiquement.</span>
+          </div>
+        </div>
+        <div class="step-v">
+          <div class="step-v-num">3</div>
+          <div class="step-v-text">
+            <strong>Orienter vers une action</strong>
+            <span>Prise de rendez-vous, lien vers une offre, proposition d'appel — le prospect est guidé vers la prochaine étape sans vous.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCENARIO -->
+      <h2 id="exemple">Exemple concret : ce que ça ressemble en vrai</h2>
+      <p>Voici comment ça se passe concrètement pour un de nos clients :</p>
+
+      <div class="scenario-box">
+        <h4>🔄 Le parcours automatisé du prospect</h4>
+        <div class="scenario-flow">
+          <div class="scenario-step">
+            <div class="s-icon">📣</div>
+            <span>Le prospect clique sur votre publicité Facebook</span>
+          </div>
+          <div class="scenario-arrow">↓</div>
+          <div class="scenario-step">
+            <div class="s-icon">💬</div>
+            <span>Il arrive sur WhatsApp ou votre site</span>
+          </div>
+          <div class="scenario-arrow">↓</div>
+          <div class="scenario-step">
+            <div class="s-icon">⚡</div>
+            <span>Un agent IA lui répond <strong>instantanément</strong> — réponse claire, utile, structurée</span>
+          </div>
+          <div class="scenario-arrow">↓</div>
+          <div class="scenario-step">
+            <div class="s-icon">🎯</div>
+            <span>Le système pose des questions simples (besoin, budget, délai) et comprend le profil</span>
+          </div>
+          <div class="scenario-arrow">↓</div>
+          <div class="scenario-step">
+            <div class="s-icon">📅</div>
+            <span>Il propose une suite logique : appel, offre personnalisée, lien de réservation</span>
+          </div>
+        </div>
+      </div>
+
+      <p><strong>Résultat :</strong> le prospect est pris en charge immédiatement, même à 2h du matin, même pendant que vous êtes en réunion.</p>
+
+      <!-- SECTION 3 -->
+      <h2 id="changements">Ce que ça change concrètement</h2>
+      <p>Vous ne travaillez pas plus. Vous perdez simplement <strong>moins d'opportunités</strong>.</p>
+
+      <div class="results-grid">
+        <div class="result-item">
+          <div class="result-icon">⚡</div>
+          <div class="result-text">Réponses rapides à chaque prospect</div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">🚫</div>
+          <div class="result-text">Zéro prospect ignoré ou oublié</div>
+        </div>
+        <div class="result-item">
+          <div class="result-icon">📈</div>
+          <div class="result-text">Meilleur suivi et meilleur taux de conversion</div>
+        </div>
+      </div>
+
+      <p>Et surtout : <strong>un système qui fonctionne même quand vous n'êtes pas disponible</strong>. Le week-end, la nuit, pendant les vacances.</p>
+
+      <div class="divider"></div>
+
+      <!-- SECTION 4 -->
+      <h2 id="limites">Ce que ce système ne fait pas</h2>
+      <p>Soyons honnêtes. Ce système est puissant, mais il a des limites claires :</p>
+
+      <ul class="limit-list">
+        <li>Il ne vend pas à votre place comme par magie</li>
+        <li>Il ne remplace pas une bonne offre ou un bon produit</li>
+        <li>Il ne transforme pas un mauvais service en succès</li>
+      </ul>
+
+      <p>Mais il fait une chose essentielle :</p>
+
+      <div class="hl-box">
+        <p>✅ <strong>Il empêche la perte de prospects déjà intéressés.</strong> Ceux qui vous ont déjà contacté, ceux qui ont cliqué sur votre pub, ceux qui étaient prêts à acheter — mais que vous avez perdus par manque de réactivité.</p>
+      </div>
+
+      <!-- QUESTION FINALE -->
+      <div class="question-finale">
+        <p>Avant de chercher plus de trafic, plus de publicité, ou plus de stratégies compliquées…</p>
+        <h3>Est-ce que vous traitez correctement<br/>les prospects que vous avez <em>déjà</em> ?</h3>
+      </div>
+
+      <p>Si la réponse est non — ou même "pas sûr" — alors l'automatisation est probablement <strong>le levier le plus simple et le plus rentable</strong> à activer pour votre business en ce moment.</p>
+
+      <!-- CTA -->
+      <div class="cta-article">
+        <h3>Passez à l'action</h3>
+        <p>Si vous voulez mettre en place un système simple et efficace pour ne plus perdre de prospects, je peux vous aider à le construire étape par étape, adapté à votre activité.</p>
+        <a href="index.html#contact" class="btn-primary">Contactez-moi pour en discuter →</a>
+      </div>
+
+      <div class="share-bar">
+        <span>Partager cet article :</span>
+        <a href="#" class="sbtn s-fb">📘 Facebook</a>
+        <a href="#" class="sbtn s-wa">💬 WhatsApp</a>
+        <button class="sbtn s-cp" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copié !'">🔗 Copier le lien</button>
+      </div>
+
+      <div class="author-box">
+        <div class="av">E</div>
+        <div>
+          <div class="au-name">Edob Marketing</div>
+          <div class="au-role">Spécialiste Automatisation & Facebook Ads pour PME</div>
+          <div class="au-bio">J'aide les entrepreneurs à ne plus perdre de prospects et à développer leur activité grâce à des systèmes d'automatisation sur mesure et des campagnes Facebook efficaces.</div>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sb-card">
+        <h4>📋 Sommaire</h4>
+        <ul class="toc-list">
+          <li><a href="#probleme">Le vrai problème</a></li>
+          <li><a href="#solution">La solution</a></li>
+          <li><a href="#exemple">Exemple concret</a></li>
+          <li><a href="#changements">Ce que ça change</a></li>
+          <li><a href="#limites">Les limites du système</a></li>
+        </ul>
+      </div>
+
+      <div class="sb-card">
+        <h4>📊 Le chiffre clé</h4>
+        <div class="stat-mini">
+          <div class="stat-num">21x</div>
+          <div class="stat-label">plus de chances de convertir en répondant dans les 5 premières minutes</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-mini">
+          <div class="stat-num">24h/7</div>
+          <div class="stat-label">votre système répond pour vous, sans interruption</div>
+        </div>
+      </div>
+
+      <div class="sb-card sb-cta">
+        <h4>🚀 Prêt à ne plus perdre de prospects ?</h4>
+        <p>Diagnostic gratuit de 30 minutes. On analyse votre situation et on construit votre système ensemble.</p>
+        <a href="index.html#contact" class="btn-primary">Démarrer gratuitement</a>
+      </div>
+
+      <div class="sb-card">
+        <h4>📚 Articles similaires</h4>
+        <div class="rel-list">
+          <div class="rel-item">
+            <div class="rel-icon">📱</div>
+            <div>
+              <a href="article-2.html">Publicité Facebook : Accroître Votre Portée en 2026</a><br/>
+              <span>10 mars 2026</span>
+            </div>
+          </div>
+          <div class="rel-item">
+            <div class="rel-icon">⏱️</div>
+            <div>
+              <a href="article-3.html">Secrets de Productivité : Gagnez du Temps Maintenant</a><br/>
+              <span>5 mars 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;margin-bottom:2.8rem;">
+      <div>
+        <a href="index.html" style="font-family:'Syne',sans-serif;font-size:1.42rem;font-weight:800;color:#fff;text-decoration:none;display:block;margin-bottom:1rem;">Edob<span style="color:#f97316">Marketing</span></a>
+        <p style="font-size:.86rem;line-height:1.72;color:rgba(255,255,255,0.62);">Solutions d'automatisation et de publicité Facebook pour les PME qui veulent croître sans s'épuiser. Transformez votre temps en profit.</p>
+      </div>
+      <div>
+        <h4 style="font-family:'Syne',sans-serif;color:#fff;font-size:.92rem;margin-bottom:.95rem;">Services</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:.55rem;">
+          <li><a href="index.html#services" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Automatisation</a></li>
+          <li><a href="index.html#services" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Publicité Facebook</a></li>
+          <li><a href="index.html#services" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-family:'Syne',sans-serif;color:#fff;font-size:.92rem;margin-bottom:.95rem;">Navigation</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:.55rem;">
+          <li><a href="index.html#how" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Comment ça marche</a></li>
+          <li><a href="index.html#projects" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Réalisations</a></li>
+          <li><a href="blog.html" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Blog</a></li>
+          <li><a href="index.html#faq" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">FAQ</a></li>
+          <li><a href="index.html#contact" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:1.4rem;display:flex;justify-content:space-between;align-items:center;font-size:.81rem;color:rgba(255,255,255,0.62);flex-wrap:wrap;gap:.5rem;">
+      <span>© 2026 <strong style="color:#fff">Edob Marketing</strong>. Tous droits réservés.</span>
+      <span>Fait avec ❤️ | <a href="/cdn-cgi/l/email-protection#99fffcf4f0d9fcfdf6fbf4f8ebf2fcedf0f7feb7eaf0edfc" style="color:#38bdf8;text-decoration:none;"><span class="__cf_email__" data-cfemail="d0b6b5bdb990b5b4bfb2bdb1a2bbb5a4b9beb7fea3b9a4b5">[email&#160;protected]</span></a></span>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  function toggleMenu(){
+    const l=document.querySelector('.nav-links');
+    if(l.style.display==='flex'){l.style.display='';}
+    else{l.style.cssText=

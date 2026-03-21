@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>L'argent caché dans votre liste clients – Edob Marketing</title>
+  <meta name="description" content="Vos anciens clients sont votre mine d'or. Découvrez comment la relance automatisée réactive les clients dormants et génère des ventes sans effort."/>
+  <meta name="keywords" content="relance clients automatique, clients dormants, réactivation clients, fidélisation clients PME"/>
+  <meta name="author" content="Edob Marketing"/>
+  <meta name="robots" content="index, follow"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="L'argent caché dans votre liste clients"/>
+  <meta property="og:description" content="60% des clients dormants rachètent après une relance bien ciblée. Découvrez comment automatiser ce processus."/>
+  <meta property="og:url" content="https://edobmarketing.site/article-4.html"/>
+  <link rel="canonical" href="https://edobmarketing.site/article-4.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg:#f0f4f8; --white:#ffffff; --dark:#0b1929;
+      --primary:#1a56db; --primary-d:#1240a8; --primary-l:#dbeafe;
+      --sky:#38bdf8; --accent:#f97316; --accent2:#fbbf24;
+      --text:#1e3a5f; --text-light:#5a7a9a;
+      --radius:16px; --radius-sm:10px;
+      --shadow:0 8px 32px rgba(11,25,41,0.10);
+      --shadow-sm:0 3px 12px rgba(11,25,41,0.07);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:var(--text);overflow-x:hidden;}
+    h1,h2,h3,h4{font-family:'Syne',sans-serif;}
+    .container{max-width:1160px;margin:0 auto;padding:0 5%;}
+    .btn-primary{display:inline-block;background:var(--primary);color:#fff;padding:.72rem 1.7rem;border-radius:50px;font-weight:600;font-size:.93rem;text-decoration:none;transition:all .25s;box-shadow:0 5px 18px rgba(26,86,219,0.28);}
+    .btn-primary:hover{background:var(--accent);transform:translateY(-2px);}
+
+    /* NAV */
+    nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(255,255,255,0.96);backdrop-filter:blur(18px);border-bottom:1px solid rgba(26,86,219,0.08);height:68px;display:flex;align-items:center;box-shadow:0 1px 16px rgba(11,25,41,0.07);}
+    nav .container{display:flex;align-items:center;justify-content:space-between;width:100%;}
+    .nav-logo{font-family:'Syne',sans-serif;font-size:1.42rem;font-weight:800;color:var(--primary);text-decoration:none;}
+    .nav-logo span{color:var(--accent);}
+    .nav-links{display:flex;gap:1.7rem;list-style:none;}
+    .nav-links a{text-decoration:none;color:var(--text);font-weight:500;font-size:.9rem;transition:color .2s;}
+    .nav-links a:hover{color:var(--primary);}
+    .nav-cta{background:var(--primary);color:#fff;padding:.48rem 1.25rem;border-radius:50px;font-weight:600;font-size:.86rem;text-decoration:none;transition:all .25s;}
+    .nav-cta:hover{background:var(--accent);}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--dark);border-radius:2px;}
+
+    /* BREADCRUMB */
+    .breadcrumb{padding:88px 0 0;background:var(--bg);}
+    .bc-inner{padding:.9rem 0;display:flex;align-items:center;gap:.45rem;font-size:.83rem;color:var(--text-light);}
+    .bc-inner a{color:var(--primary);text-decoration:none;}
+
+    /* HERO */
+    .art-hero{background:var(--bg);padding:2rem 0 0;}
+    .art-hero-inner{max-width:780px;}
+    .art-cat{display:inline-block;background:var(--primary-l);color:var(--primary);font-size:.76rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:.28rem .78rem;border-radius:50px;margin-bottom:1.1rem;}
+    .art-hero h1{font-size:clamp(1.75rem,4vw,2.9rem);font-weight:700;color:var(--dark);line-height:1.25;margin-bottom:.9rem;letter-spacing:-0.5px;}
+    .art-hero h1 em{font-style:normal;color:var(--accent);}
+    .art-intro{font-size:1.1rem;color:var(--text-light);line-height:1.78;margin-bottom:1.4rem;border-left:4px solid var(--accent);padding-left:1.2rem;}
+    .art-meta{display:flex;align-items:center;gap:1.4rem;font-size:.82rem;color:var(--text-light);padding:1.1rem 0;border-top:1px solid rgba(26,86,219,0.1);flex-wrap:wrap;}
+    .art-cover{width:100%;aspect-ratio:21/9;border-radius:var(--radius) var(--radius) 0 0;overflow:hidden;position:relative;margin-top:1.8rem;}
+    .art-cover img{width:100%;height:100%;object-fit:cover;display:block;}
+    .art-cover-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(18,64,168,0.75),rgba(249,115,22,0.5));display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;}
+    .art-cover-big{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3.8rem);font-weight:800;color:#fff;line-height:1.1;}
+    .art-cover-sub{font-size:1rem;color:rgba(255,255,255,0.85);margin-top:.6rem;font-weight:500;}
+
+    /* LAYOUT */
+    .art-layout{display:grid;grid-template-columns:1fr 290px;gap:3.8rem;padding:2.8rem 0 80px;max-width:1100px;}
+
+    /* CONTENT */
+    .art-content h2{font-size:1.45rem;font-weight:700;color:var(--dark);margin:2.8rem 0 1rem;letter-spacing:-0.3px;}
+    .art-content h3{font-size:1.1rem;font-weight:700;color:var(--dark);margin:1.8rem 0 .7rem;}
+    .art-content p{font-size:.97rem;color:var(--text);line-height:1.9;margin-bottom:1.2rem;}
+    .art-content strong{color:var(--dark);}
+    .art-content ul{padding-left:1.5rem;margin-bottom:1.2rem;}
+    .art-content li{font-size:.97rem;color:var(--text);line-height:1.85;margin-bottom:.45rem;}
+
+    /* COLLIER STYLE BLOCKS */
+    .collier-hook{background:linear-gradient(135deg,#0b1929,#1240a8);border-radius:var(--radius);padding:2.2rem 2.5rem;margin:2rem 0;position:relative;overflow:hidden;}
+    .collier-hook::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:rgba(249,115,22,0.12);border-radius:50%;}
+    .collier-hook p{color:rgba(255,255,255,0.88);font-size:1rem;line-height:2;margin-bottom:.7rem;position:relative;}
+    .collier-hook p:last-child{margin:0;}
+    .collier-hook .accent-line{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;color:var(--accent2);display:block;margin:.5rem 0;}
+
+    .hl-box{background:var(--primary-l);border-left:4px solid var(--primary);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:1.15rem 1.45rem;margin:1.8rem 0;}
+    .hl-box p{margin:0;font-size:.95rem;color:var(--primary-d);font-weight:500;line-height:1.7;}
+
+    .orange-box{background:linear-gradient(135deg,#fff7ed,#ffedd5);border-left:4px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:1.15rem 1.45rem;margin:1.8rem 0;}
+    .orange-box p{margin:0;font-size:.95rem;color:#7c2d12;line-height:1.7;}
+
+    /* SECTEURS */
+    .secteurs-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:1.8rem 0;}
+    .secteur-card{background:#fff;border-radius:var(--radius);padding:1.5rem;border:1px solid rgba(26,86,219,0.1);box-shadow:var(--shadow-sm);transition:all .3s;}
+    .secteur-card:hover{box-shadow:var(--shadow);transform:translateY(-2px);}
+    .secteur-header{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem;}
+    .secteur-icon{width:42px;height:42px;background:var(--primary-l);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;}
+    .secteur-name{font-family:'Syne',sans-serif;font-weight:700;color:var(--dark);font-size:.97rem;}
+    .secteur-scenario{font-size:.85rem;color:var(--text-light);line-height:1.65;margin-bottom:.9rem;}
+    .secteur-result{display:flex;align-items:center;gap:.5rem;font-size:.83rem;font-weight:600;color:var(--primary);background:var(--primary-l);padding:.35rem .8rem;border-radius:50px;width:fit-content;}
+
+    /* STATS */
+    .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0;}
+    .stat-box{background:var(--bg);border-radius:var(--radius-sm);padding:1.3rem;text-align:center;border:1px solid rgba(26,86,219,0.08);}
+    .stat-big{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;color:var(--primary);}
+    .stat-desc{font-size:.8rem;color:var(--text-light);margin-top:.3rem;line-height:1.4;}
+
+    /* SEQUENCE */
+    .sequence-box{background:#fff;border:1px solid rgba(26,86,219,0.1);border-radius:var(--radius);padding:1.8rem;margin:1.8rem 0;box-shadow:var(--shadow-sm);}
+    .sequence-box h4{font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:1.2rem;display:flex;align-items:center;gap:.5rem;}
+    .seq-step{display:flex;gap:1rem;align-items:flex-start;margin-bottom:.9rem;}
+    .seq-step:last-child{margin:0;}
+    .seq-day{min-width:70px;background:var(--primary);color:#fff;border-radius:8px;padding:.35rem .6rem;font-family:'Syne',sans-serif;font-size:.78rem;font-weight:700;text-align:center;flex-shrink:0;}
+    .seq-content strong{display:block;font-size:.9rem;color:var(--dark);margin-bottom:.2rem;}
+    .seq-content span{font-size:.83rem;color:var(--text-light);line-height:1.55;}
+    .seq-arrow{text-align:center;color:rgba(26,86,219,0.3);font-size:1rem;margin:.3rem 0 .3rem 35px;}
+
+    /* QUESTION FINALE */
+    .question-finale{background:linear-gradient(135deg,#0b1929,#1240a8);border-radius:var(--radius);padding:2.5rem;margin:2.5rem 0;text-align:center;color:#fff;position:relative;overflow:hidden;}
+    .question-finale::after{content:'💰';position:absolute;right:2rem;bottom:1rem;font-size:5rem;opacity:.12;}
+    .question-finale p{font-size:1rem;color:rgba(255,255,255,0.78);margin-bottom:1rem;line-height:1.8;}
+    .question-finale h3{font-size:1.65rem;font-weight:800;line-height:1.3;color:#fff;}
+    .question-finale em{font-style:normal;color:var(--accent2);}
+
+    /* CTA */
+    .cta-article{background:linear-gradient(145deg,var(--primary-d),var(--primary));border-radius:var(--radius);padding:2.2rem;margin:2.5rem 0;color:#fff;text-align:center;}
+    .cta-article h3{font-size:1.3rem;font-weight:700;margin-bottom:.7rem;}
+    .cta-article p{font-size:.92rem;opacity:.82;line-height:1.7;margin-bottom:1.5rem;}
+    .cta-article .btn-primary{background:#fff;color:var(--primary);font-size:.95rem;padding:.8rem 2rem;}
+    .cta-article .btn-primary:hover{background:var(--accent2);color:var(--dark);}
+
+    .divider{height:1px;background:rgba(26,86,219,0.1);margin:2.5rem 0;}
+
+    .share-bar{display:flex;align-items:center;gap:.9rem;padding:1.4rem;background:var(--bg);border-radius:var(--radius);margin:2.4rem 0;flex-wrap:wrap;}
+    .share-bar span{font-weight:600;font-size:.88rem;color:var(--dark);}
+    .sbtn{display:inline-flex;align-items:center;gap:.35rem;padding:.42rem .95rem;border-radius:50px;font-size:.8rem;font-weight:600;text-decoration:none;transition:all .2s;border:none;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;}
+    .sbtn:hover{opacity:.88;transform:translateY(-1px);}
+    .s-fb{background:#1877F2;color:#fff;}
+    .s-wa{background:#25D366;color:#fff;}
+    .s-cp{background:var(--primary-l);color:var(--primary);}
+
+    .author-box{display:flex;gap:1.15rem;align-items:center;padding:1.4rem;background:var(--bg);border-radius:var(--radius);margin:1.8rem 0;border:1px solid rgba(26,86,219,0.08);}
+    .av{width:56px;height:56px;background:linear-gradient(135deg,var(--sky),var(--primary));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;}
+    .au-name{font-family:'Syne',sans-serif;font-weight:700;color:var(--dark);font-size:.97rem;}
+    .au-role{font-size:.79rem;color:var(--text-light);}
+    .au-bio{font-size:.85rem;color:var(--text-light);line-height:1.6;margin-top:.35rem;}
+
+    /* SIDEBAR */
+    .sidebar{display:flex;flex-direction:column;gap:1.4rem;}
+    .sb-card{background:var(--bg);border-radius:var(--radius);padding:1.4rem;border:1px solid rgba(26,86,219,0.08);}
+    .sb-card h4{font-size:.92rem;font-weight:700;color:var(--dark);margin-bottom:.95rem;}
+    .toc-list{list-style:none;display:flex;flex-direction:column;gap:.45rem;}
+    .toc-list li a{font-size:.83rem;color:var(--text-light);text-decoration:none;display:flex;align-items:center;gap:.35rem;transition:color .2s;line-height:1.5;}
+    .toc-list li a:hover{color:var(--primary);}
+    .toc-list li a::before{content:'→';font-size:.68rem;color:var(--primary);flex-shrink:0;}
+    .sb-cta{background:linear-gradient(145deg,var(--primary-d),var(--primary));color:#fff;}
+    .sb-cta h4{color:#fff;}
+    .sb-cta p{font-size:.83rem;color:rgba(255,255,255,0.78);line-height:1.6;margin-bottom:.95rem;}
+    .sb-cta .btn-primary{background:#fff;color:var(--primary);width:100%;text-align:center;display:block;font-size:.86rem;}
+    .sb-stat{text-align:center;padding:.4rem 0;}
+    .sb-stat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--accent);}
+    .sb-stat-label{font-size:.76rem;color:var(--text-light);margin-top:.2rem;line-height:1.4;}
+    .sb-divider{height:1px;background:rgba(26,86,219,0.1);margin:.8rem 0;}
+    .rel-list{display:flex;flex-direction:column;gap:.75rem;}
+    .rel-item{display:flex;gap:.75rem;align-items:flex-start;}
+    .rel-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;background:var(--primary-l);}
+    .rel-item a{font-size:.83rem;font-weight:600;color:var(--dark);text-decoration:none;line-height:1.4;}
+    .rel-item a:hover{color:var(--primary);}
+    .rel-item span{font-size:.73rem;color:var(--text-light);}
+
+    footer{background:var(--dark);padding:40px 0 25px;color:rgba(255,255,255,0.62);}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;font-size:.81rem;}
+    .footer-bottom a{color:var(--sky);text-decoration:none;}
+    .fnav{display:flex;gap:1.5rem;}
+    .fnav a{color:rgba(255,255,255,0.58);text-decoration:none;font-size:.85rem;transition:color .2s;}
+    .fnav a:hover{color:var(--sky);}
+
+    @media(max-width:1024px){.art-layout{grid-template-columns:1fr;}.sidebar{display:none;}.secteurs-grid{grid-template-columns:1fr;}.stats-row{grid-template-columns:1fr 1fr;}}
+    @media(max-width:768px){.nav-links,.nav-cta{display:none;}.hamburger{display:flex;}.stats-row{grid-template-columns:1fr;}.footer-bottom{flex-direction:column;gap:.8rem;text-align:center;}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="index.html" class="nav-logo">Edob<span>Marketing</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#how">Comment ça marche</a></li>
+      <li><a href="index.html#projects">Réalisations</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta">Démarrer →</a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="container">
+    <div class="bc-inner">
+      <a href="index.html">Accueil</a><span>/</span>
+      <a href="blog.html">Blog</a><span>/</span>
+      <span>L'argent caché dans votre liste clients</span>
+    </div>
+  </div>
+</div>
+
+<div class="art-hero">
+  <div class="container">
+    <div class="art-hero-inner">
+      <span class="art-cat">Automatisation</span>
+      <h1>L'argent caché dans<br/><em>votre liste clients</em></h1>
+      <p class="art-intro">
+        Vous avez déjà des clients. Ils vous ont fait confiance une fois. Ils ont dépensé leur argent chez vous. Et puis… le silence. Voici pourquoi cette liste qui dort est votre ressource la plus précieuse — et comment la réveiller automatiquement.
+      </p>
+      <div class="art-meta">
+        <span>📅 21 mars 2026</span>
+        <span>⏱️ 7 min de lecture</span>
+        <span>✍️ Edob Marketing</span>
+        <span>🏷️ Relance clients</span>
+      </div>
+    </div>
+    <div class="art-cover">
+      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&auto=format&fit=crop" alt="Relance clients automatisée"/>
+      <div class="art-cover-overlay">
+        <div class="art-cover-big">Vos anciens clients<br/>sont votre mine d'or</div>
+        <div class="art-cover-sub">La plupart des entreprises l'ignorent complètement</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="art-layout">
+
+    <article class="art-content">
+
+      <!-- HOOK COLLIER STYLE -->
+      <div class="collier-hook">
+        <p>Imaginez un instant.</p>
+        <p>Vous avez un coffre-fort dans votre bureau.</p>
+        <p>À l'intérieur : des billets. Des centaines. Peut-être des milliers.</p>
+        <span class="accent-line">Mais vous avez perdu la clé.</span>
+        <p>Alors vous sortez chaque jour chercher de nouveaux clients. Vous dépensez en publicité. Vous prospectez. Vous vous épuisez.</p>
+        <p>Alors que la clé de ce coffre était dans votre poche depuis le début.</p>
+        <p style="color:#fff;font-weight:600;">Cette clé, c'est votre liste de clients dormants.</p>
+      </div>
+
+      <p>Plusieurs études démontrent que : <strong>acquérir un nouveau client coûte 5 à 7 fois plus cher</strong> que de vendre à nouveau à un client existant. Pourtant, la grande majorité des PME consacrent 90% de leurs efforts à trouver de nouveaux clients — et oublient ceux qui leur ont déjà fait confiance.</p>
+
+      <div class="hl-box">
+        <p>💡 <strong>Définition :</strong> Un client dormant est un client qui a déjà acheté chez vous mais qui n'a plus donné signe de vie depuis 60, 90 ou 120 jours. Il n'est pas parti chez un concurrent. Il a juste… oublié de revenir.</p>
+      </div>
+
+      <!-- STATS -->
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-big">5x</div>
+          <div class="stat-desc">moins cher de relancer un ancien client que d'en acquérir un nouveau</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-big">60%</div>
+          <div class="stat-desc">des clients dormants rachètent après une relance bien ciblée</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-big">3x</div>
+          <div class="stat-desc">plus de chances de convertir un ancien client vs un prospect froid</div>
+        </div>
+      </div>
+
+      <!-- SECTION 1 -->
+      <h2 id="pourquoi">Pourquoi vos clients disparaissent</h2>
+
+      <p>Voici la vérité que personne ne vous dit :</p>
+      <p>La majorité de vos clients ne partent pas parce qu'ils sont mécontents. Ils ne partent pas parce que votre concurrent est meilleur. Ils disparaissent pour une raison bien plus banale — et bien plus corrigeable.</p>
+
+      <div class="orange-box">
+        <p>⚡ <strong>La vraie raison :</strong> Ils ont tout simplement oublié que vous existiez. La vie les a absorbés. D'autres priorités sont apparues. Et vous, vous n'avez pas frappé à leur porte au bon moment.</p>
+      </div>
+
+      <p>Un client satisfait qui ne reçoit aucune nouvelle de vous pendant 6 mois finit par chercher ailleurs — pas par mauvaise volonté, mais par réflexe naturel. <strong>L'absence de communication est le premier concurrent de votre business.</strong></p>
+
+      <!-- SECTION 2 - SECTEURS -->
+      <h2 id="secteurs">Ce que ça représente concrètement, secteur par secteur</h2>
+      <p>Prenons des exemples précis pour que vous puissiez vous reconnaître :</p>
+
+      <div class="secteurs-grid">
+
+        <div class="secteur-card">
+          <div class="secteur-header">
+            <div class="secteur-icon">✂️</div>
+            <div class="secteur-name">Salon de coiffure</div>
+          </div>
+          <p class="secteur-scenario">
+            Marie vient tous les 6 semaines. Puis la vie s'emballe — boulot, enfants, déménagement. Ça fait 4 mois qu'elle n'est pas revenue. Elle ne vous a pas oublié, elle n'a juste pas eu le déclic. Un simple message automatique — <em>"Ça fait un moment, votre coupe vous attend"</em> — et elle reprend rendez-vous dans la journée.
+          </p>
+          <div class="secteur-result">📈 +35% de rendez-vous récupérés</div>
+        </div>
+
+        <div class="secteur-card">
+          <div class="secteur-header">
+            <div class="secteur-icon">🍽️</div>
+            <div class="secteur-name">Restaurant</div>
+          </div>
+          <p class="secteur-scenario">
+            Un client habituel venait tous les vendredis soir. Il a arrêté sans raison apparente. Une relance personnalisée avec une offre spéciale "Retour au bercail" — une entrée offerte — lui rappelle pourquoi il aimait votre table. Il revient. Et il ramène sa femme.
+          </p>
+          <div class="secteur-result">📈 +28% de clients récurrents</div>
+        </div>
+
+        <div class="secteur-card">
+          <div class="secteur-header">
+            <div class="secteur-icon">👗</div>
+            <div class="secteur-name">Boutique de mode</div>
+          </div>
+          <p class="secteur-scenario">
+            Une cliente a acheté une robe en janvier. Depuis, rien. La nouvelle collection vient d'arriver. Un message ciblé — <em>"La nouvelle collection est là, et on a pensé à vous"</em> — la ramène en boutique. Elle repart avec deux articles au lieu d'un.
+          </p>
+          <div class="secteur-result">📈 Panier moyen multiplié par 1.8</div>
+        </div>
+
+        <div class="secteur-card">
+          <div class="secteur-header">
+            <div class="secteur-icon">🏋️</div>
+            <div class="secteur-name">Coach sportif</div>
+          </div>
+          <p class="secteur-scenario">
+            Un élève a suivi 3 mois de coaching puis s'est arrêté après les fêtes. Classique. Une séquence de relance automatique — rappel de ses progrès, motivation personnalisée, offre de reprise — le ramène sur le tapis. La motivation, ça se rallume.
+          </p>
+          <div class="secteur-result">📈 60% de taux de retour</div>
+        </div>
+
+        <div class="secteur-card">
+          <div class="secteur-header">
+            <div class="secteur-icon">🏠</div>
+            <div class="secteur-name">Agence immobilière</div>
+          </div>
+          <p class="secteur-scenario">
+            Un client a visité 5 biens sans acheter. Il s'est tu. 3 mois plus tard, un nouveau bien correspondant exactement à ses critères arrive sur le marché. Une alerte automatique lui est envoyée instantanément. Il rappelle dans l'heure.
+          </p>
+          <div class="secteur-result">📈 Délai de vente réduit de 40%</div>
+        </div>
+
+        <div class="secteur-card">
+          <div class="secteur-header">
+            <div class="secteur-icon">🛒</div>
+            <div class="secteur-name">Boutique e-commerce</div>
+          </div>
+          <p class="secteur-scenario">
+            Un client a commandé en novembre pour Noël. Depuis, il n'est plus revenu. En mars, un message — <em>"On a quelque chose pour vous"</em> — avec une offre exclusive pour les clients existants. Il commande à nouveau. Le cycle reprend.
+          </p>
+          <div class="secteur-result">📈 LTV client augmentée de 45%</div>
+        </div>
+
+      </div>
+
+      <!-- SECTION 3 -->
+      <h2 id="systeme">Comment automatiser la relance sans paraître insistant</h2>
+
+      <p>La relance automatisée mal faite, c'est du spam. La relance bien faite, c'est de l'attention.</p>
+      <p>La différence tient à trois principes que nous appliquons systématiquement :</p>
+
+      <div class="sequence-box">
+        <h4>🔄 Exemple de séquence de relance automatisée sur 21 jours</h4>
+
+        <div class="seq-step">
+          <div class="seq-day">Jour 1</div>
+          <div class="seq-content">
+            <strong>Message de reconnexion chaleureux</strong>
+            <span>"Ça fait un moment… On voulait juste prendre de vos nouvelles." — Ton humain, pas commercial.</span>
+          </div>
+        </div>
+        <div class="seq-arrow">↓</div>
+        <div class="seq-step">
+          <div class="seq-day">Jour 5</div>
+          <div class="seq-content">
+            <strong>Contenu de valeur personnalisé</strong>
+            <span>Un conseil utile lié à son dernier achat ou sa dernière interaction avec vous.</span>
+          </div>
+        </div>
+        <div class="seq-arrow">↓</div>
+        <div class="seq-step">
+          <div class="seq-day">Jour 10</div>
+          <div class="seq-content">
+            <strong>Preuve sociale + nouveauté</strong>
+            <span>"Voici ce que nos clients disent en ce moment" + présentation d'une nouveauté pertinente.</span>
+          </div>
+        </div>
+        <div class="seq-arrow">↓</div>
+        <div class="seq-step">
+          <div class="seq-day">Jour 21</div>
+          <div class="seq-content">
+            <strong>Offre exclusive "client fidèle"</strong>
+            <span>Une offre spéciale réservée aux clients existants. Sentiment de privilège, pas de promotion générique.</span>
+          </div>
+        </div>
+      </div>
+
+      <p>Ce système tourne <strong>sans que vous fassiez quoi que ce soit</strong>. Il se déclenche automatiquement quand un client n'a pas interagi depuis X jours — vous définissez le seuil selon votre secteur.</p>
+
+      <div class="hl-box">
+        <p>✅ <strong>Règle d'or :</strong> Ne relancez jamais pour vendre. Relancez pour apporter de la valeur. La vente vient naturellement après la reconnexion.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- QUESTION FINALE -->
+      <div class="question-finale">
+        <p>Vous avez travaillé dur pour gagner chaque client sur votre liste.<br/>Vous avez dépensé du temps, de l'argent, de l'énergie.</p>
+        <h3>Pourquoi laisser tout ça <em>dormir</em><br/>alors qu'un simple message peut tout réveiller ?</h3>
+      </div>
+
+      <p>La relance automatisée n'est pas un gadget. C'est l'un des leviers les plus rentables que vous pouvez activer aujourd'hui — parce que vous partez de clients qui vous connaissent déjà, qui vous font déjà confiance, et qui ont déjà prouvé qu'ils sont prêts à acheter.</p>
+
+      <p>Il ne manque qu'une chose : <strong>le bon message, au bon moment, envoyé automatiquement.</strong></p>
+
+      <!-- CTA -->
+      <div class="cta-article">
+        <h3>Réactivez votre liste clients dès cette semaine</h3>
+        <p>On analyse ensemble vos clients dormants, on construit la séquence de relance adaptée à votre secteur, et on la met en place. Sans effort de votre côté.</p>
+        <a href="index.html#contact" class="btn-primary">Parler de votre projet →</a>
+      </div>
+
+      <div class="share-bar">
+        <span>Partager :</span>
+        <a href="#" class="sbtn s-fb">📘 Facebook</a>
+        <a href="#" class="sbtn s-wa">💬 WhatsApp</a>
+        <button class="sbtn s-cp" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copié !'">🔗 Copier le lien</button>
+      </div>
+
+      <div class="author-box">
+        <div class="av">E</div>
+        <div>
+          <div class="au-name">Edob Marketing</div>
+          <div class="au-role">Spécialiste Automatisation & Facebook Ads pour PME</div>
+          <div class="au-bio">J'aide les entrepreneurs à ne plus perdre de prospects et à développer leur activité grâce à des systèmes d'automatisation sur mesure et des campagnes Facebook efficaces.</div>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sb-card">
+        <h4>📋 Sommaire</h4>
+        <ul class="toc-list">
+          <li><a href="#pourquoi">Pourquoi vos clients disparaissent</a></li>
+          <li><a href="#secteurs">Exemples par secteur</a></li>
+          <li><a href="#systeme">Comment automatiser la relance</a></li>
+        </ul>
+      </div>
+
+      <div class="sb-card">
+        <h4>💰 Ce que ça représente</h4>
+        <div class="sb-stat">
+          <div class="sb-stat-num">5x</div>
+          <div class="sb-stat-label">moins cher de relancer un client existant que d'en acquérir un nouveau</div>
+        </div>
+        <div class="sb-divider"></div>
+        <div class="sb-stat">
+          <div class="sb-stat-num">60%</div>
+          <div class="sb-stat-label">des clients dormants rachètent après une relance bien ciblée</div>
+        </div>
+      </div>
+
+      <div class="sb-card sb-cta">
+        <h4>💬 Réactivez vos clients</h4>
+        <p>On construit votre séquence de relance automatisée, adaptée à votre secteur. Diagnostic gratuit.</p>
+        <a href="index.html#contact" class="btn-primary">Démarrer gratuitement</a>
+      </div>
+
+      <div class="sb-card">
+        <h4>📚 Articles similaires</h4>
+        <div class="rel-list">
+          <div class="rel-item">
+            <div class="rel-icon">🤖</div>
+            <div>
+              <a href="article-1.html">Pourquoi vous perdez des clients sans le savoir</a><br/>
+              <span>21 mars 2026</span>
+            </div>
+          </div>
+          <div class="rel-item">
+            <div class="rel-icon">📱</div>
+            <div>
+              <a href="article-2.html">Publicité Facebook : Accroître Votre Portée</a><br/>
+              <span>10 mars 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;margin-bottom:2.8rem;">
+      <div>
+        <a href="index.html" style="font-family:'Syne',sans-serif;font-size:1.42rem;font-weight:800;color:#fff;text-decoration:none;display:block;margin-bottom:1rem;">Edob<span style="color:#f97316">Marketing</span></a>
+        <p style="font-size:.86rem;line-height:1.72;color:rgba(255,255,255,0.62);">Solutions d'automatisation et de publicité Facebook pour les PME qui veulent croître sans s'épuiser. Transformez votre temps en profit.</p>
+      </div>
+      <div>
+        <h4 style="font-family:'Syne',sans-serif;color:#fff;font-size:.92rem;margin-bottom:.95rem;">Services</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:.55rem;">
+          <li><a href="index.html#services" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Automatisation</a></li>
+          <li><a href="index.html#services" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Publicité Facebook</a></li>
+          <li><a href="index.html#services" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-family:'Syne',sans-serif;color:#fff;font-size:.92rem;margin-bottom:.95rem;">Navigation</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:.55rem;">
+          <li><a href="index.html#how" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Comment ça marche</a></li>
+          <li><a href="index.html#projects" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Réalisations</a></li>
+          <li><a href="blog.html" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Blog</a></li>
+          <li><a href="index.html#faq" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">FAQ</a></li>
+          <li><a href="index.html#contact" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:1.4rem;display:flex;justify-content:space-between;align-items:center;font-size:.81rem;color:rgba(255,255,255,0.62);flex-wrap:wrap;gap:.5rem;">
+      <span>© 2026 <strong style="color:#fff">Edob Marketing</strong>. Tous droits réservés.</span>
+      <span>Fait avec ❤️ | <a href="/cdn-cgi/l/email-protection#bbddded6d2fbdedfd4d9d6dac9d0decfd2d5dc95c8d2cfde" style="color:#38bdf8;text-decoration:none;"><span class="__cf_email__" data-cfemail="c3a5a6aeaa83a6a7aca1aea2b1a8a6b7aaada4edb0aab7a6">[email&#160;protected]</span></a></span>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  function toggleMenu(){
+    const l=document.querySelector('.nav-links');
+    if(l.style.display==='flex'){l.style.display='';}
+    else{l.style.cssText=

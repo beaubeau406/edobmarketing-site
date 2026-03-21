@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog – Conseils Automatisation & Facebook Ads | Edob Marketing</title>
+  <meta name="description" content="Découvrez nos articles sur l'automatisation des tâches pour PME et la publicité Facebook Ads. Conseils pratiques pour développer votre activité."/>
+  <meta name="keywords" content="blog automatisation PME, conseils Facebook Ads, marketing digital PME"/>
+  <meta name="author" content="Edob Marketing"/>
+  <meta name="robots" content="index, follow"/>
+  <meta property="og:type" content="blog"/>
+  <meta property="og:title" content="Blog Edob Marketing – Automatisation & Facebook Ads"/>
+  <meta property="og:url" content="https://edobmarketing.site/blog.html"/>
+  <link rel="canonical" href="https://edobmarketing.site/blog.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--bg:#f0f4f8;--bg2:#e8eef5;--white:#ffffff;--dark:#0b1929;--dark2:#132540;--primary:#1a56db;--primary-d:#1240a8;--primary-l:#dbeafe;--sky:#38bdf8;--accent:#f97316;--accent2:#fbbf24;--text:#1e3a5f;--text-light:#5a7a9a;--radius:16px;--radius-sm:10px;--shadow:0 8px 32px rgba(11,25,41,0.10);--shadow-sm:0 3px 12px rgba(11,25,41,0.07);}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+    h1,h2,h3,h4{font-family:'Syne',sans-serif;}
+    .container{max-width:1160px;margin:0 auto;padding:0 5%;}
+    .btn-primary{display:inline-block;background:var(--primary);color:#fff;padding:.72rem 1.7rem;border-radius:50px;font-weight:600;font-size:.93rem;text-decoration:none;transition:all .25s;box-shadow:0 5px 18px rgba(26,86,219,0.28);}
+    .btn-primary:hover{background:var(--accent);transform:translateY(-2px);}
+    nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(255,255,255,0.96);backdrop-filter:blur(18px);border-bottom:1px solid rgba(26,86,219,0.08);height:68px;display:flex;align-items:center;box-shadow:0 1px 16px rgba(11,25,41,0.07);}
+    nav .container{display:flex;align-items:center;justify-content:space-between;width:100%;}
+    .nav-logo{font-family:'Syne',sans-serif;font-size:1.42rem;font-weight:800;color:var(--primary);text-decoration:none;}
+    .nav-logo span{color:var(--accent);}
+    .nav-links{display:flex;gap:1.7rem;list-style:none;}
+    .nav-links a{text-decoration:none;color:var(--text);font-weight:500;font-size:.9rem;transition:color .2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--primary);}
+    .nav-cta{background:var(--primary);color:#fff;padding:.48rem 1.25rem;border-radius:50px;font-weight:600;font-size:.86rem;text-decoration:none;transition:all .25s;}
+    .nav-cta:hover{background:var(--accent);}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--dark);border-radius:2px;}
+
+    /* HERO */
+    .blog-hero{background:linear-gradient(140deg,#071525 0%,#0d2545 35%,#1240a8 70%,#1a56db 100%);padding:116px 0 68px;text-align:center;position:relative;overflow:hidden;}
+    .blog-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 70% at 50% 100%,rgba(56,189,248,0.12) 0%,transparent 65%);}
+    .hero-tag{display:inline-block;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);color:var(--accent2);font-size:.78rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:.3rem .85rem;border-radius:50px;margin-bottom:1rem;position:relative;}
+    .blog-hero h1{font-size:clamp(1.9rem,4vw,3.1rem);font-weight:800;color:#fff;margin-bottom:.9rem;position:relative;}
+    .blog-hero p{font-size:1rem;color:rgba(255,255,255,0.72);max-width:500px;margin:0 auto;line-height:1.75;position:relative;}
+
+    /* FILTERS */
+    .filters{padding:2.2rem 0 0;display:flex;gap:.6rem;flex-wrap:wrap;}
+    .filter-btn{border:1.5px solid rgba(26,86,219,0.18);background:var(--white);color:var(--text-light);padding:.42rem 1.05rem;border-radius:50px;font-size:.83rem;font-weight:600;cursor:pointer;transition:all .2s;font-family:'Plus Jakarta Sans',sans-serif;}
+    .filter-btn:hover,.filter-btn.active{background:var(--primary);color:#fff;border-color:var(--primary);}
+
+    /* FEATURED */
+    .featured{margin:2.2rem 0;background:var(--white);border-radius:var(--radius);overflow:hidden;display:grid;grid-template-columns:1.1fr 1fr;box-shadow:var(--shadow);border:1px solid rgba(26,86,219,0.07);transition:all .3s;}
+    .featured:hover{transform:translateY(-3px);box-shadow:0 18px 50px rgba(11,25,41,0.13);}
+    .feat-img{background:linear-gradient(135deg,#bfdbfe 0%,#3b82f6 50%,#1240a8 100%);display:flex;align-items:center;justify-content:center;font-size:5rem;min-height:300px;}
+    .feat-body{padding:2.4rem;display:flex;flex-direction:column;justify-content:center;}
+    .feat-label{display:inline-block;background:var(--accent);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:.22rem .75rem;border-radius:50px;margin-bottom:.95rem;}
+    .feat-body h2{font-size:1.65rem;font-weight:800;color:var(--dark);margin-bottom:.75rem;line-height:1.3;}
+    .feat-body p{font-size:.92rem;color:var(--text-light);line-height:1.75;margin-bottom:1.4rem;}
+    .a-meta{display:flex;align-items:center;gap:1rem;font-size:.8rem;color:var(--text-light);margin-bottom:1.4rem;flex-wrap:wrap;}
+    .read-link{display:inline-flex;align-items:center;gap:.35rem;color:var(--primary);font-weight:700;font-size:.9rem;text-decoration:none;transition:gap .2s;}
+    .read-link:hover{gap:.65rem;color:var(--accent);}
+
+    /* GRID */
+    .articles-sec{padding:3rem 0 80px;}
+    .articles-sec h2{font-size:1.35rem;font-weight:700;color:var(--dark);margin-bottom:1.7rem;}
+    .art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;}
+    .art-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid rgba(26,86,219,0.07);transition:all .3s;display:flex;flex-direction:column;}
+    .art-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);}
+    .art-img{width:100%;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:2.7rem;}
+    .art-img.c1{background:linear-gradient(135deg,#bfdbfe,#93c5fd);}
+    .art-img.c2{background:linear-gradient(135deg,#93c5fd,#3b82f6);}
+    .art-img.c3{background:linear-gradient(135deg,#3b82f6,#1240a8);}
+    .art-img.c4{background:linear-gradient(135deg,#1240a8,#071525);}
+    .art-img.c5{background:linear-gradient(135deg,#dbeafe,#60a5fa);}
+    .art-body{padding:1.4rem;flex:1;display:flex;flex-direction:column;}
+    .art-cat{display:inline-block;background:var(--primary-l);color:var(--primary);font-size:.7rem;font-weight:600;padding:.18rem .6rem;border-radius:50px;margin-bottom:.55rem;}
+    .art-body h3{font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:.45rem;line-height:1.4;}
+    .art-body p{font-size:.85rem;color:var(--text-light);line-height:1.6;flex:1;}
+    .art-footer{display:flex;justify-content:space-between;align-items:center;margin-top:1rem;}
+    .art-date{font-size:.76rem;color:var(--text-light);}
+
+    /* NEWSLETTER */
+    .newsletter{background:linear-gradient(145deg,var(--primary-d),var(--primary));border-radius:var(--radius);padding:2.8rem;text-align:center;margin-bottom:80px;}
+    .newsletter h3{font-size:1.55rem;font-weight:800;color:#fff;margin-bottom:.65rem;}
+    .newsletter p{color:rgba(255,255,255,0.75);margin-bottom:1.7rem;font-size:.92rem;}
+    .nl-form{display:flex;gap:.75rem;max-width:430px;margin:0 auto;}
+    .nl-form input{flex:1;padding:.72rem 1.15rem;border-radius:50px;border:none;font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;outline:none;background:#fff;color:var(--dark);}
+    .nl-form button{background:var(--accent);color:#fff;border:none;padding:.72rem 1.4rem;border-radius:50px;font-weight:600;font-size:.88rem;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all .25s;white-space:nowrap;}
+    .nl-form button:hover{background:#e55311;transform:translateY(-1px);}
+
+    /* FOOTER */
+    footer{background:var(--dark);padding:40px 0 25px;color:rgba(255,255,255,0.62);}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;font-size:.81rem;}
+    .footer-bottom a{color:var(--sky);text-decoration:none;}
+    .fnav{display:flex;gap:1.5rem;}
+    .fnav a{color:rgba(255,255,255,0.58);text-decoration:none;font-size:.85rem;transition:color .2s;}
+    .fnav a:hover{color:var(--sky);}
+
+    [data-aos]{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s;}
+    [data-aos].visible{opacity:1;transform:translateY(0);}
+    @media(max-width:1024px){.art-grid{grid-template-columns:1fr 1fr;}.featured{grid-template-columns:1fr;}.feat-img{min-height:200px;}}
+    @media(max-width:768px){.nav-links,.nav-cta{display:none;}.hamburger{display:flex;}.art-grid{grid-template-columns:1fr;}.nl-form{flex-direction:column;}.footer-bottom{flex-direction:column;gap:.8rem;text-align:center;}}
+  </style>
+</head>
+<body>
+<nav>
+  <div class="container">
+    <a href="index.html" class="nav-logo">Edob<span>Marketing</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#how">Comment ça marche</a></li>
+      <li><a href="index.html#projects">Réalisations</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta">Démarrer →</a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="blog-hero">
+  <div class="container">
+    <div class="hero-tag">✦ Conseils & Stratégies</div>
+    <h1>Le Blog Edob Marketing</h1>
+    <p>Astuces, guides et stratégies pour automatiser votre PME et booster votre visibilité sur Facebook.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="filters" data-aos>
+    <button class="filter-btn active">Tous</button>
+    <button class="filter-btn">Automatisation</button>
+    <button class="filter-btn">Facebook Ads</button>
+    <button class="filter-btn">Productivité</button>
+    <button class="filter-btn">Stratégie PME</button>
+  </div>
+
+  <div class="featured" data-aos>
+    <div class="feat-img">⚙️</div>
+    <div class="feat-body">
+      <span class="feat-label">⭐ Article phare</span>
+      <h2>Automatisation pour PME : Le Guide Ultime</h2>
+      <div class="a-meta">
+        <span>📅 15 mars 2026</span>
+        <span>⏱️ 8 min de lecture</span>
+        <span>🏷️ Automatisation</span>
+      </div>
+      <p>Découvrez comment automatiser efficacement vos tâches répétitives et récupérer des heures précieuses chaque semaine. Un guide complet avec des exemples concrets pour les PME.</p>
+      <a href="article-1.html" class="read-link">Lire l'article complet →</a>
+    </div>
+  </div>
+
+  <div class="articles-sec">
+    <h2>Tous les articles</h2>
+    <div class="art-grid">
+      <div class="art-card" data-aos>
+        <div class="art-img c2">📱</div>
+        <div class="art-body">
+          <span class="art-cat">Facebook Ads</span>
+          <h3>Publicité Facebook : Accroître Votre Portée en 2026</h3>
+          <p>Les stratégies qui fonctionnent vraiment pour conquérir les réseaux sociaux et générer des leads qualifiés.</p>
+          <div class="art-footer"><span class="art-date">10 mars 2026</span><a href="article-2.html" class="read-link" style="font-size:.83rem">Lire →</a></div>
+        </div>
+      </div>
+      <div class="art-card" data-aos>
+        <div class="art-img c3">⏱️</div>
+        <div class="art-body">
+          <span class="art-cat">Productivité</span>
+          <h3>Secrets de Productivité : Gagnez du Temps Maintenant</h3>
+          <p>Les outils et méthodes concrètes pour libérer votre agenda des tâches à faible valeur ajoutée.</p>
+          <div class="art-footer"><span class="art-date">5 mars 2026</span><a href="article-3.html" class="read-link" style="font-size:.83rem">Lire →</a></div>
+        </div>
+      </div>
+      <div class="art-card" data-aos>
+        <div class="art-img c1">⚙️</div>
+        <div class="art-body">
+          <span class="art-cat">Automatisation</span>
+          <h3>5 outils gratuits pour automatiser votre PME dès aujourd'hui</h3>
+          <p>Zapier, Make, n8n… les meilleurs outils d'automatisation accessibles même sans budget.</p>
+          <div class="art-footer"><span class="art-date">28 fév. 2026</span><a href="article-1.html" class="read-link" style="font-size:.83rem">Lire →</a></div>
+        </div>
+      </div>
+      <div class="art-card" data-aos>
+        <div class="art-img c4">💡</div>
+        <div class="art-body">
+          <span class="art-cat">Stratégie PME</span>
+          <h3>Pourquoi votre PME perd du temps (et comment y remédier)</h3>
+          <p>Analyse des tâches chronophages les plus communes et les solutions concrètes pour s'en libérer.</p>
+          <div class="art-footer"><span class="art-date">20 fév. 2026</span><a href="article-1.html" class="read-link" style="font-size:.83rem">Lire →</a></div>
+        </div>
+      </div>
+      <div class="art-card" data-aos>
+        <div class="art-img c5">📊</div>
+        <div class="art-body">
+          <span class="art-cat">Facebook Ads</span>
+          <h3>Comment créer une publicité Facebook qui convertit vraiment</h3>
+          <p>Ciblage, visuel, texte, budget… les éléments clés d'une campagne Facebook qui génère des résultats.</p>
+          <div class="art-footer"><span class="art-date">12 fév. 2026</span><a href="article-2.html" class="read-link" style="font-size:.83rem">Lire →</a></div>
+        </div>
+      </div>
+      <div class="art-card" data-aos>
+        <div class="art-img c2">🎯</div>
+        <div class="art-body">
+          <span class="art-cat">Automatisation</span>
+          <h3>Automatisation pour PME : Le Guide Ultime</h3>
+          <p>Découvrez comment automatiser vos tâches répétitives et récupérer des heures précieuses.</p>
+          <div class="art-footer"><span class="art-date">15 mars 2026</span><a href="article-1.html" class="read-link" style="font-size:.83rem">Lire →</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="newsletter" data-aos>
+    <h3>📩 Recevez nos conseils chaque semaine</h3>
+    <p>Rejoignez les PME qui reçoivent nos meilleures astuces d'automatisation et de publicité Facebook.</p>
+    <div class="nl-form">
+      <input type="email" placeholder="Votre adresse email..."/>
+      <button onclick="this.textContent='✓ Inscrit !';this.style.background='#1a56db'">S'inscrire</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;margin-bottom:2.8rem;">
+      <div>
+        <a href="index.html" style="font-family:'Syne',sans-serif;font-size:1.42rem;font-weight:800;color:#fff;text-decoration:none;display:block;margin-bottom:1rem;">Edob<span style="color:#f97316">Marketing</span></a>
+        <p style="font-size:.86rem;line-height:1.72;color:rgba(255,255,255,0.62);">Solutions d'automatisation et de publicité Facebook pour les PME qui veulent croître sans s'épuiser. Transformez votre temps en profit.</p>
+      </div>
+      <div>
+        <h4 style="font-family:'Syne',sans-serif;color:#fff;font-size:.92rem;margin-bottom:.95rem;">Services</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:.55rem;">
+          <li><a href="index.html#services" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Automatisation</a></li>
+          <li><a href="index.html#services" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Publicité Facebook</a></li>
+          <li><a href="index.html#services" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-family:'Syne',sans-serif;color:#fff;font-size:.92rem;margin-bottom:.95rem;">Navigation</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:.55rem;">
+          <li><a href="index.html#how" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Comment ça marche</a></li>
+          <li><a href="index.html#projects" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Réalisations</a></li>
+          <li><a href="blog.html" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Blog</a></li>
+          <li><a href="index.html#faq" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">FAQ</a></li>
+          <li><a href="index.html#contact" style="color:rgba(255,255,255,0.58);text-decoration:none;font-size:.86rem;">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:1.4rem;display:flex;justify-content:space-between;align-items:center;font-size:.81rem;color:rgba(255,255,255,0.62);flex-wrap:wrap;gap:.5rem;">
+      <span>© 2026 <strong style="color:#fff">Edob Marketing</strong>. Tous droits réservés.</span>
+      <span>Fait avec ❤️ | <a href="/cdn-cgi/l/email-protection#d1b7b4bcb891b4b5beb3bcb0a3bab4a5b8bfb6ffa2b8a5b4" style="color:#38bdf8;text-decoration:none;"><span class="__cf_email__" data-cfemail="2640434b4f66434249444b47544d43524f484108554f5243">[email&#160;protected]</span></a></span>
+    </div>
+  </div>
+</footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  const obs = new IntersectionObserver(e=>e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('visible')}),{threshold:0.1});
+  document.querySelectorAll('[data-aos]').forEach(el=>obs.observe(el));
+  document.querySelectorAll('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');}));
+  function toggleMenu(){const l=document.querySelector('.nav-links');if(l.style.display==='flex'){l.style.display='';}else{l.style.cssTe
